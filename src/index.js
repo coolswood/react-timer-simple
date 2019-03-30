@@ -87,21 +87,21 @@ export default class Index extends Component {
               during={rippleDuring}
               style={buttonStyle}
               onClick={this.reset.bind(this)}
-          ><button>{reset}</button></Ripples>}
+          >{reset}</Ripples>}
           {play && <Ripples
               className="react-timer__button"
               color={rippleColor}
               during={rippleDuring}
               style={buttonStyle}
               onClick={this.play.bind(this)}
-          ><button>{play}</button></Ripples>}
+          >{play}</Ripples>}
           {pause && <Ripples
               className="react-timer__button"
               color={rippleColor}
               during={rippleDuring}
               style={buttonStyle}
               onClick={this.pause.bind(this)}
-          ><button>{pause}</button></Ripples>}
+          >{pause}</Ripples>}
         </div>
       </div>
     )

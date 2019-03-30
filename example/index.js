@@ -44,22 +44,24 @@ class TestComponent extends Component {
             delay: 1000,
             autoplay: false,
             startTime: 0,
-            play: 'Старт',
-            pause: 'Пауза',
-            reset: 'Очистить',
+            play: 'play',
+            pause: 'pause',
+            reset: 'clear',
             rippleColor: "#ffffff40",
             rippleDuring: 1000
         };
 
         return (
-            <Timer
-                // updateTimer={this.updateTimer}
-                options={OPTIONS}
-                timerStyle={timerStyle}
-                buttonsStyle={buttonsStyle}
-                buttonStyle={buttonStyle}
-                secondsStyles={secondsStyles}
-            />
+            <div className="timer-wrap">
+                <Timer
+                    // updateTimer={this.updateTimer}
+                    options={OPTIONS}
+                    timerStyle={timerStyle}
+                    buttonsStyle={buttonsStyle}
+                    buttonStyle={buttonStyle}
+                    secondsStyles={secondsStyles}
+                />
+            </div>
         )
     }
 }

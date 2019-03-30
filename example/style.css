@@ -1,0 +1,25 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('./bg.jpg') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.timer-wrap {
+    width: 500px;
+    padding: 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+
+.react-timer__button:hover {
+    background: #8e44ad !important;
+    color: #fff !important;
+    transition: .5s;
+}

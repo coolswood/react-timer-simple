@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import SecondsTohhmmss from './SecondsTohhmmss'
 import PropTypes from 'prop-types'
-import Ripples from 'react-ripples'
+import Ripple from '@intereact/ripple';
 
 let offset = null, interval = null;
 const defaultTime = '00:00:00';
 
 /**
- * Timer module
- * A simple timer component.
+* Timer module
+* A simple timer component.
 **/
 export default class Index extends Component {
 
@@ -27,18 +27,6 @@ export default class Index extends Component {
     this.pause()
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-
-    if(nextProps.options.startTime !== this.state.clock) {
-      this.setState({
-        clock: nextProps.options.startTime,
-        time: SecondsTohhmmss(this.props.options.startTime / 1000)
-      })
-    }
-
-    return true
-  }
-
   pause() {
     if (interval) {
       clearInterval(interval)
@@ -55,9 +43,8 @@ export default class Index extends Component {
 
   reset() {
     let clockReset = 0;
-    this.setState({clock: clockReset })
     let time = SecondsTohhmmss(clockReset / 1000)
-    this.setState({time: time })
+    this.setState({clock: clockReset, time: time })
   }
 
   update = () => {
@@ -65,45 +52,62 @@ export default class Index extends Component {
 
     let clock = this.state.clock;
     clock += options.delay;
-    this.setState({clock: clock })
     let time = SecondsTohhmmss(clock / 1000)
-    this.setState({time: time })
+    this.setState({clock: clock, time: time })
 
-    updateTimer ? updateTimer(clock) : this.setState({clock: clock})
+    updateTimer && updateTimer(clock)
   };
 
   render() {
     const { timerStyle, secondsStyles, buttonsStyle, buttonStyle, prefix, options } = this.props;
-    const { play, pause, reset, rippleColor, rippleDuring } = options;
+    const { play, pause, reset, ripple } = options;
 
     return (
       <div style={timerStyle} className="react-timer">
-        <h3 style={secondsStyles} className="seconds"> {this.state.time || defaultTime} {prefix}</h3>
-        <br />
-        <div style={buttonsStyle} className="react-timer__buttons">
-          {reset && <Ripples
-              className="react-timer__button"
-              color={rippleColor}
-              during={rippleDuring}
-              style={buttonStyle}
-              onClick={this.reset.bind(this)}
-          >{reset}</Ripples>}
-          {play && <Ripples
-              className="react-timer__button"
-              color={rippleColor}
-              during={rippleDuring}
-              style={buttonStyle}
-              onClick={this.play.bind(this)}
-          >{play}</Ripples>}
-          {pause && <Ripples
-              className="react-timer__button"
-              color={rippleColor}
-              during={rippleDuring}
-              style={buttonStyle}
-              onClick={this.pause.bind(this)}
-          >{pause}</Ripples>}
-        </div>
-      </div>
-    )
-  }
-}
+      <h3 style={secondsStyles} className="seconds"> {this.state.time || defaultTime} {prefix}</h3>
+      <br />
+      <div style={buttonsStyle} className="react-timer__buttons">
+
+      {reset && <Ripple {...ripple}>
+
+        { (ripples) => (
+          <button className="react-timer__button"
+          style={{...buttonStyle, position: 'relative'}}
+          onClick={this.reset.bind(this)}>
+          {reset}
+          { ripples }
+          </button>
+        ) }
+
+        </Ripple>}
+
+        {play && <Ripple {...ripple}>
+
+          { (ripples) => (
+            <button className="react-timer__button"
+            style={{...buttonStyle, position: 'relative'}}
+            onClick={this.play.bind(this)}>
+            {play}
+            { ripples }
+            </button>
+          ) }
+
+          </Ripple>}
+
+          {pause && <Ripple {...ripple}>
+
+            { (ripples) => (
+              <button className="react-timer__button"
+              style={{...buttonStyle, position: 'relative'}}
+              onClick={this.pause.bind(this)}>
+              {pause}
+              { ripples }
+              </button>
+            ) }
+
+            </Ripple>}
+            </div>
+            </div>
+          )
+        }
+      }

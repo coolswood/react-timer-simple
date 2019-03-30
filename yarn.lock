@@ -672,6 +672,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@intereact/ripple@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@intereact/ripple/-/ripple-1.1.1.tgz#bd029c95deb30356cd3539f1928e27ecf62ef9ea"
+  integrity sha512-dWC15fCGDgonjYHm2BQDSas+piIwdw5uL/DsZZQ0Nhg771xMJqWWHPOh1hlVyIM/cjrleTZ/IVQyPg82BZ9DmQ==
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -860,7 +865,7 @@ prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-react-dom@^16.8.6:
+react-dom@^16.3.0:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -883,7 +888,7 @@ react-ripples@^1.1.2:
     prop-types "^15.6.0"
     react "^16.2.0"
 
-react@^16.0.0, react@^16.2.0:
+react@^16.2.0, react@^16.3.0:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==

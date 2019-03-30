@@ -28,7 +28,8 @@ class TestComponent extends Component {
             textTransform: "uppercase",
             letterSpacing: "0.42px",
             cursor: "pointer",
-            textAlign: "center"
+            textAlign: "center",
+            outline: "none"
         };
 
         const secondsStyles = {
@@ -41,20 +42,22 @@ class TestComponent extends Component {
         };
 
         const OPTIONS = {
-            delay: 1000,
+            delay: 100,
             autoplay: false,
             startTime: 0,
             play: 'play',
             pause: 'pause',
             reset: 'clear',
-            rippleColor: "#ffffff40",
-            rippleDuring: 1000
+            ripple: {
+                enterDuration: 400,
+                exitDuration: 400,
+                size: "cover"
+            }
         };
 
         return (
             <div className="timer-wrap">
                 <Timer
-                    // updateTimer={this.updateTimer}
                     options={OPTIONS}
                     timerStyle={timerStyle}
                     buttonsStyle={buttonsStyle}

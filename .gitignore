@@ -62,4 +62,4 @@ typings/
 
 .cache
 .idea
-example/dist
+dist

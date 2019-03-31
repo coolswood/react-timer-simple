@@ -27,6 +27,15 @@ export default class Index extends Component {
     this.pause()
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.options.startTime !== this.props.options.startTime) {
+      this.setState({
+        clock: nextProps.options.startTime,
+        time: SecondsTohhmmss(nextProps.options.startTime / 1000)
+      })
+    }
+  }
+
   pause() {
     if (interval) {
       clearInterval(interval)
@@ -45,6 +54,7 @@ export default class Index extends Component {
     let clockReset = 0;
     let time = SecondsTohhmmss(clockReset / 1000)
     this.setState({clock: clockReset, time: time })
+    this.pause()
   }
 
   update = () => {

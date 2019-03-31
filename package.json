@@ -1,11 +1,11 @@
 {
   "name": "react-timer-simple",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./libs/index.js",
   "scripts": {
     "dev": "parcel ./example/index.html",
-    "build": "parcel build ./src/index.js"
+    "build": "parcel build ./src/index.js --out-dir ./libs"
   },
   "keywords": [],
   "author": "coolswood",

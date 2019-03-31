@@ -47,7 +47,7 @@ class TestComponent extends Component {
             startTime: 0,
             play: 'play',
             pause: 'pause',
-            reset: 'clear',
+            reset: 'reset',
             ripple: {
                 enterDuration: 400,
                 exitDuration: 400,

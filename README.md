@@ -1,5 +1,7 @@
 # react-timer-simple
 
+Simple customized timer on React in material design. Has callbacks API.
+
 ## Installation
 
 ```sh

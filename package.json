@@ -1,13 +1,13 @@
 {
   "name": "react-timer-simple",
-  "version": "1.1.0",
-  "description": "Simple customized timer on React in material design. Has callbacks API.",
+  "version": "1.1.2",
+  "description": "Simple customized timer on React in material design with ripple effect. Has callbacks API.",
   "main": "./libs/index.js",
   "scripts": {
     "dev": "parcel ./example/index.html",
     "build": "parcel build ./src/index.js --out-dir ./libs"
   },
-  "keywords": ["react", "timer", "react-timer", "react timer", "counter", "material", "timer component"],
+  "keywords": ["react", "timer", "react-timer", "react timer", "counter", "material", "timer component", "ripple", "effect", "button"],
   "author": "coolswood",
   "license": "MIT",
   "repository": "https://github.com/coolswood/react-timer-simple",

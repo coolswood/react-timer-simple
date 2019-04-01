@@ -2,17 +2,19 @@
 
 Simple customized timer on React in material design. Has callbacks API.
 
-## Installation
+![alt text](https://coolswood.github.io/npm/react-timer-simple/image.gif)
+
+### Installation
 
 ```sh
 $ npm i react-timer-simple
 ```
 
-## DEMO
+### DEMO
 
 ### [click](https://coolswood.github.io/projects/error-jurnal)
 
-## Usage
+### Usage
 
 ```javascript
 import Timer from 'react-timer-simple';

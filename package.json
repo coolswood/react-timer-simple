@@ -1,7 +1,7 @@
 {
   "name": "react-timer-simple",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple customized timer on React in material design. ",
   "main": "./libs/index.js",
   "scripts": {
     "dev": "parcel ./example/index.html",
@@ -10,6 +10,7 @@
   "keywords": [],
   "author": "coolswood",
   "license": "MIT",
+  "repository": "https://github.com/coolswood/react-timer-simple",
   "dependencies": {
     "@intereact/ripple": "^1.1.1",
     "react": "^16.3.0",
@@ -19,6 +20,7 @@
     "@babel/core": "^7.0.0-0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "parcel": "^1.12.3"
   }
 }

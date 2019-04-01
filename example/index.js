@@ -42,7 +42,7 @@ class TestComponent extends Component {
         };
 
         const OPTIONS = {
-            delay: 100,
+            delay: 1000,
             autoplay: false,
             startTime: 0,
             play: 'play',

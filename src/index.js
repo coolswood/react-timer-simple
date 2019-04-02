@@ -68,9 +68,27 @@ export default class Index extends Component {
     updateTimer && updateTimer(clock)
   };
 
+  _renderButtons = (type, func) => {
+    const { buttonStyle, options } = this.props;
+    const { ripple } = options;
+
+    return <Ripple {...ripple}>
+
+        { (ripples) => (
+          <button className="react-timer__button"
+          style={{...buttonStyle, position: 'relative'}}
+          onClick={func}>
+          {type}
+          { ripples }
+          </button>
+        ) }
+
+    </Ripple>
+  };
+
   render() {
-    const { timerStyle, secondsStyles, buttonsStyle, buttonStyle, prefix, options } = this.props;
-    const { play, pause, reset, ripple } = options;
+    const { timerStyle, secondsStyles, buttonsStyle, prefix, options } = this.props;
+    const { play, pause, reset } = options;
 
     return (
       <div style={timerStyle} className="react-timer">
@@ -78,46 +96,12 @@ export default class Index extends Component {
       <br />
       <div style={buttonsStyle} className="react-timer__buttons">
 
-      {reset && <Ripple {...ripple}>
+      {reset && this._renderButtons(reset, this.reset.bind(this))}
+      {play && this._renderButtons(play, this.play.bind(this))}
+      {pause && this._renderButtons(pause, this.pause.bind(this))}
 
-        { (ripples) => (
-          <button className="react-timer__button"
-          style={{...buttonStyle, position: 'relative'}}
-          onClick={this.reset.bind(this)}>
-          {reset}
-          { ripples }
-          </button>
-        ) }
-
-        </Ripple>}
-
-        {play && <Ripple {...ripple}>
-
-          { (ripples) => (
-            <button className="react-timer__button"
-            style={{...buttonStyle, position: 'relative'}}
-            onClick={this.play.bind(this)}>
-            {play}
-            { ripples }
-            </button>
-          ) }
-
-          </Ripple>}
-
-          {pause && <Ripple {...ripple}>
-
-            { (ripples) => (
-              <button className="react-timer__button"
-              style={{...buttonStyle, position: 'relative'}}
-              onClick={this.pause.bind(this)}>
-              {pause}
-              { ripples }
-              </button>
-            ) }
-
-            </Ripple>}
-            </div>
-            </div>
-          )
-        }
-      }
+      </div>
+      </div>
+    )
+  }
+}

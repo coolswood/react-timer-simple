@@ -1,5 +1,7 @@
 # react-timer-simple
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/99a072a5ec6206373611/maintainability)](https://codeclimate.com/github/coolswood/react-timer-simple/maintainability)
+
 Simple customized timer on React in material design. Has callbacks API.
 
 ![alt text](https://coolswood.github.io/npm/react-timer-simple/image.gif)

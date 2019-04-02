@@ -4,7 +4,6 @@ node_js:
 install:
   - yarn install
 script:
-  - make build
-  - make dev
+  - yarn build
 notifications:
   email: false

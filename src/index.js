@@ -5,6 +5,7 @@ import Ripple from '@intereact/ripple';
 
 let offset = null, interval = null;
 const defaultTime = '00:00:00';
+const delay = 1000;
 
 /**
 * Timer module
@@ -14,7 +15,7 @@ export default class Index extends Component {
 
   state = {
     clock: this.props.options.startTime || 0,
-    time: SecondsTohhmmss(this.props.options.startTime / 1000)
+    time: SecondsTohhmmss(this.props.options.startTime / delay)
   };
 
   componentDidMount() {
@@ -31,7 +32,7 @@ export default class Index extends Component {
     if(nextProps.options.startTime !== this.props.options.startTime) {
       this.setState({
         clock: nextProps.options.startTime,
-        time: SecondsTohhmmss(nextProps.options.startTime / 1000)
+        time: SecondsTohhmmss(nextProps.options.startTime / delay)
       })
     }
   }
@@ -46,23 +47,23 @@ export default class Index extends Component {
   play() {
     if (!interval) {
       offset = Date.now()
-      interval = setInterval(this.update, this.props.options.delay)
+      interval = setInterval(this.update, delay)
     }
   }
 
   reset() {
     let clockReset = 0;
-    let time = SecondsTohhmmss(clockReset / 1000)
+    let time = SecondsTohhmmss(clockReset / delay)
     this.setState({clock: clockReset, time: time })
     this.pause()
   }
 
   update = () => {
-    const {options, updateTimer} = this.props;
+    const {updateTimer} = this.props;
 
     let clock = this.state.clock;
-    clock += options.delay;
-    let time = SecondsTohhmmss(clock / 1000)
+    clock += delay;
+    let time = SecondsTohhmmss(clock / delay)
     this.setState({clock: clock, time: time })
 
     updateTimer && updateTimer(clock)

@@ -38,7 +38,6 @@ const secondsStyles = {
 };
 
 const OPTIONS = {
-    delay: 1000,
     autoplay: false,
     startTime: 0,
     play: 'play',

@@ -18,9 +18,13 @@ $ npm i react-timer-simple
 
 ### Usage
 
+Import timer to your project.
+
 ```javascript
 import Timer from 'react-timer-simple';
+```
 
+```javascript
 const timerStyle = {
         margin: "0px",
         padding: "1em"
@@ -57,7 +61,6 @@ const timerStyle = {
     };
 
     const OPTIONS = {
-        delay: 1000,
         autoplay: false,
         startTime: 0,
         play: 'play',

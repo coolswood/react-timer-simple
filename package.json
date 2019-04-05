@@ -1,20 +1,31 @@
 {
   "name": "react-timer-simple",
-  "version": "1.1.3",
-  "description": "Simple customized timer on React in material design with ripple effect. Has callbacks API.",
+  "version": "2.0.0",
+  "description": "Simple customized timer on React in material design with ripple effect. React 16.8.",
   "main": "./libs/index.js",
   "scripts": {
     "dev": "parcel ./example/index.html",
     "build": "parcel build ./src/index.js --out-dir ./libs"
   },
-  "keywords": ["react", "timer", "react-timer", "react timer", "counter", "material", "timer component", "ripple", "effect", "button"],
+  "keywords": [
+    "react",
+    "timer",
+    "react-timer",
+    "react timer",
+    "counter",
+    "material",
+    "timer component",
+    "ripple",
+    "effect",
+    "button"
+  ],
   "author": "coolswood",
   "license": "MIT",
   "repository": "https://github.com/coolswood/react-timer-simple",
   "dependencies": {
     "@intereact/ripple": "^1.1.1",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",

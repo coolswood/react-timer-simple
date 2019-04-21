@@ -1,5 +1,7 @@
 # react-timer-simple
 
+[![Maintainability](https://travis-ci.org/coolswood/react-timer-simple.svg?branch=master)](https://travis-ci.org/coolswood/react-timer-simple.svg?branch=master)
+[![Maintainability](https://badge.fury.io/js/react-timer-simple.svg)](https://badge.fury.io/js/react-timer-simple.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/99a072a5ec6206373611/maintainability)](https://codeclimate.com/github/coolswood/react-timer-simple/maintainability)
 
 Simple customized timer on React in material design. Has callbacks API.

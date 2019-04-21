@@ -1,6 +1,6 @@
 {
   "name": "react-timer-simple",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple customized timer on React in material design with ripple effect. React 16.8.",
   "main": "./libs/index.js",
   "scripts": {

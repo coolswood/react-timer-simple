@@ -97,8 +97,8 @@ export default class Index extends Component {
 
     return (
       <div style={timerStyle} className="react-timer">
-        {limit && <div style={limitStyle} className="react-timer__limit">{SecondsTohhmmss(limitTime / delay)}</div>}
-        <h3 style={isOverTime ? overTime : secondsStyles} className={`react-timer__seconds ${isOverTime ? "react-timer__seconds--overtime" : ''}`}> {this.state.time || defaultTime} {prefix}</h3>
+        {!!limit && <div style={limitStyle} className="react-timer__limit">{SecondsTohhmmss(limitTime / delay)}</div>}
+        <h3 style={(isOverTime && limitTime) ? overTime : secondsStyles} className={`react-timer__seconds ${(isOverTime && limitTime) ? "react-timer__seconds--overtime" : ''}`}> {this.state.time || defaultTime} {prefix}</h3>
         <br />
         <div style={buttonsStyle} className="react-timer__buttons">
 

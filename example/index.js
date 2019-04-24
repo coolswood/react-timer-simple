@@ -37,9 +37,28 @@ const secondsStyles = {
     textAlign: 'center'
 };
 
+const overTime = {
+    fontSize: "64px",
+    fontWeight: "400",
+    lineHeight: "75px",
+    margin: "0",
+    color: "rgb(232, 79, 100)",
+    textAlign: 'center'
+};
+
+const limitStyle = {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    color: "#312f2f",
+    fontWeight: "400",
+    fontSize: "20px"
+};
+
 const OPTIONS = {
     autoplay: false,
     startTime: 0,
+    limit: 5000,
     play: 'play',
     pause: 'pause',
     reset: 'reset',
@@ -62,6 +81,8 @@ class TestComponent extends Component {
                     buttonsStyle={buttonsStyle}
                     buttonStyle={buttonStyle}
                     secondsStyles={secondsStyles}
+                    limitStyle={limitStyle}
+                    overTime={overTime}
                 />
             </div>
         )

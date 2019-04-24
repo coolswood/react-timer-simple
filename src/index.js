@@ -88,18 +88,23 @@ export default class Index extends Component {
   };
 
   render() {
-    const { timerStyle, secondsStyles, buttonsStyle, prefix, options } = this.props;
-    const { play, pause, reset } = options;
+    const { timerStyle, secondsStyles, buttonsStyle, overTime, limitStyle, prefix, options } = this.props;
+    const { play, pause, reset, limit } = options;
+
+    let limitTime = limit || 0;
+
+    let isOverTime = this.state.clock > limitTime;
 
     return (
       <div style={timerStyle} className="react-timer">
-      <h3 style={secondsStyles} className="seconds"> {this.state.time || defaultTime} {prefix}</h3>
-      <br />
-      <div style={buttonsStyle} className="react-timer__buttons">
+        {limit && <div style={limitStyle} className="react-timer__limit">{SecondsTohhmmss(limitTime / delay)}</div>}
+        <h3 style={isOverTime ? overTime : secondsStyles} className={`react-timer__seconds ${isOverTime ? "react-timer__seconds--overtime" : ''}`}> {this.state.time || defaultTime} {prefix}</h3>
+        <br />
+        <div style={buttonsStyle} className="react-timer__buttons">
 
-      {reset && this._renderButtons(reset, this.reset.bind(this))}
-      {play && this._renderButtons(play, this.play.bind(this))}
-      {pause && this._renderButtons(pause, this.pause.bind(this))}
+        {reset && this._renderButtons(reset, this.reset.bind(this))}
+        {play && this._renderButtons(play, this.play.bind(this))}
+        {pause && this._renderButtons(pause, this.pause.bind(this))}
 
       </div>
       </div>

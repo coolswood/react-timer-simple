@@ -62,13 +62,32 @@ const timerStyle = {
         textAlign: 'center'
     };
 
+    const overTime = {
+        fontSize: "64px",
+        fontWeight: "400",
+        lineHeight: "75px",
+        margin: "0",
+        color: "rgb(232, 79, 100)",
+        textAlign: 'center'
+    };
+
+    const limitStyle = {
+        position: 'absolute',
+        top: 20,
+        right: 20,
+        color: "#312f2f",
+        fontWeight: "400",
+        fontSize: "20px"
+    };
+
     const OPTIONS = {
         autoplay: false,
-        startTime: 0,
-        play: 'play',
-        pause: 'pause',
-        reset: 'reset',
-        ripple: {
+        startTime: 0, // milliseconds
+        limit: 5000, // If the time is greater than the limit, the main timer will change the styles. You can, for example, paint it red (milliseconds)
+        play: 'play', // button name. If not set, the button will not appear
+        pause: 'pause', // button name. If not set, the button will not appear
+        reset: 'reset', // button name. If not set, the button will not appear
+        ripple: { // Ripple lib https://www.npmjs.com/package/@intereact/ripple
             enterDuration: 400,
             exitDuration: 400,
             size: "cover"
@@ -81,5 +100,7 @@ const timerStyle = {
     buttonsStyle={buttonsStyle}
     buttonStyle={buttonStyle}
     secondsStyles={secondsStyles}
+    limitStyle={limitStyle}
+    overTime={overTime}
  />
 ```
